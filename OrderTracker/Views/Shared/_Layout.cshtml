@@ -12,14 +12,7 @@
         <a class="nav-link disabled"></a>
       </li>
       <li class="nav-item">
-        @if (Model.currentPage = "")
-        { 
-          return "<a class='nav-link active' aria-current='page' href='/'>Home</a>";
-        }
-        else
-        { 
-          return "<a class='nav-link' aria-current='page' href='/'>Home</a>";
-         }
+        <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/vendors">View by Vendor</a>
