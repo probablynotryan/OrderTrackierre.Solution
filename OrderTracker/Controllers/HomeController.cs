@@ -1,14 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ToDoList.Controllers
+namespace OrderTracker.Controllers
 {
     public class HomeController : Controller
     {
+      string view = "";
 
-      [HttpGet("/")]
-      public ActionResult Index()
+      [HttpGet("/{currentPage}")]
+      public ActionResult Create(string currentPage)
       {
-        return View();
+        return View(currentPage);
       }
 
     }
