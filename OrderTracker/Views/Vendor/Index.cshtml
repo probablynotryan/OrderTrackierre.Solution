@@ -1,5 +1,15 @@
 @{
   Layout = "_Layout";
 }
+@using OrderTracker.Models
+<h1>Active Vendors</h1>
 
-<h1>Vendorer</h1>
+@if (@vendor.Id == 0) 
+{
+  <h3>No currently active vendors.</h3>
+}
+
+@foreach (Vendor vendor in Model)
+{
+  <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
+}

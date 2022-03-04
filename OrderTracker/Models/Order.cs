@@ -24,7 +24,7 @@ namespace OrderTracker.Models
     public static void ClearAll()
     {
       _orders.Clear();
-      Id = 0;
+      // Id = 0;
     }
   }
 }
