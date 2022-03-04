@@ -6,8 +6,8 @@ namespace OrderTracker.Models
   {
     public string Name { get; set; }
     public string Description { get; set; }
-    public int Id { get; }
-    public static List<Vendor> _vendors = new List<Vendor> {};
+    public int Id { get; } 
+    public static List<Vendor> _vendors = new List<Vendor> ();
 
     public Vendor (string nameOfVendor, string descriptionOfVendor)
     {
@@ -17,11 +17,10 @@ namespace OrderTracker.Models
       Id = _vendors.Count;
     }
 
-    // public static void ClearAll()
-    // {
-    //   _vendors.Clear();
-    //   Id = 0;
-    // }
+    public static void ClearAll()
+    {
+      _vendors.Clear();
+    }
 
     public static List<Vendor> GetAll()
     {
