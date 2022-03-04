@@ -7,7 +7,7 @@ using OrderTracker.Models;
 namespace OrderTracker.Tests
 {
   [TestClass]
-  public class OTests
+  public class OrderTests
   {
     // public void Dispose()
     // {
@@ -17,7 +17,7 @@ namespace OrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order testOrder = new Order("Test", "TestTheSequel", "TestAndTheFurious3", "AnotherTestString");
+      Order testOrder = new Order("TestAndTheFurious", "2Test2Furious", "TestAndTheFurious3", "AnotherTestString");
       Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
   }
