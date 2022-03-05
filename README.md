@@ -6,8 +6,10 @@
 
 ## Technologies Used
 
-* C+
-* Other stuff
+* C#
+* Bootstrap / Popper
+* MVC
+* Razzor
 
 ## Description
 
