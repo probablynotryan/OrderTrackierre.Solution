@@ -9,7 +9,7 @@ namespace OrderTracker.Models
     public string Price { get; set; } 
     public string Description { get; set; }
     public int Id { get; }
-    public static List<Order> _orders = new List<Order> { };
+    private static List<Order> _orders = new List<Order> { };
 
     public Order(string date, string title, string price, string description)
     {
@@ -20,11 +20,20 @@ namespace OrderTracker.Models
       _orders.Add(this);
       Id = _orders.Count;
     }
+    
+    public static List<Order> GetAll()
+    {
+      return _orders;
+    }
 
     public static void ClearAll()
     {
       _orders.Clear();
-      // Id = 0;
+    }
+
+    public static Order Find(int searchId)
+    {
+      return _orders[searchId-1];
     }
   }
 }
