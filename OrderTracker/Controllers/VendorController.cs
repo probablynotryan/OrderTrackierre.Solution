@@ -49,7 +49,7 @@ namespace OrderTracker.Controllers
       List<Order> vendorOrders = foundVendor.Order;
       model.Add("order", vendorOrders);
       model.Add("vendor", foundVendor);
-      return View(model);
+      return View("Show", model);
     }
     }
 }
