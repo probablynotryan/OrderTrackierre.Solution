@@ -15,8 +15,8 @@ namespace OrderTracker.Models
       Name = nameOfVendor;
       Description = descriptionOfVendor;
       _vendors.Add(this);
-      Order = new List<Order>{};
       Id = _vendors.Count;
+      Order = new List<Order>{};
     }
 
     public static void ClearAll()
@@ -32,6 +32,11 @@ namespace OrderTracker.Models
     public static Vendor Find(int searchId)
     {
       return _vendors[searchId-1];
-    }    
+    }
+
+    public void AddOrder(Order order)
+    {
+      Order.Add(order);
+    }
   }
 }
