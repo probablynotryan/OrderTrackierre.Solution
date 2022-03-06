@@ -2,10 +2,9 @@
   Layout = "_Layout";
 }
 
-<h1>To Do List Item Details: </h1>
+<h1>Orders: </h1>
 
 <h2>@Model["order"].Description</h2>
 <h3>Category: @Model["vendor"].Name</h3>
 
-<a href='/vendors/@Model["vendor"].Id/items/new'>Add another order</a>
-<a href='/vendors'>View all Vendors</a>
+<a class="btn btn-primary" href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>

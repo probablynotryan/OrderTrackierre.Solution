@@ -4,15 +4,17 @@
 
 @using OrderTracker.Models;
 
-<h3>Here are all the items in this category:</h3>
+<h3>@Model["vendor"].Name Orders:</h3>
 
-<ol>
+<ul>
+@if (@Model["order"].Count == 0)
+{
+  <p>No orders currently active</p>
+}
 @foreach (Order order in @Model["order"])
 {
   <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
 }
-</ol>
+</ul>
 
-<p><a href='/vendors/@Model["vendor"].Id/order/new'>Add a new item</a></p>
-<p><a href='/vendors'>Return to category list</a></p>
-<p><a href='/'>Return to Main Page</a></p>
+<a class="btn btn-primary" href='/vendors/@Model["vendor"].Id/orders/new'>Add New Order</a>
