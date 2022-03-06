@@ -9,10 +9,10 @@ namespace OrderTracker.Tests
   [TestClass]
   public class OrderTests
   {
-    // public void Dispose()
-    // {
-    //   Order.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
