@@ -7,7 +7,7 @@ namespace OrderTracker.Controllers
     public class OrderController : Controller
     {
 
-      [HttpGet("/vendors/{vendorId}/orders/new")]
+      [HttpGet("/vendors/{vendorId}/order/new")]
       public ActionResult New(int vendorId)
       {
         Vendor vendor = Vendor.Find(vendorId);
@@ -21,7 +21,7 @@ namespace OrderTracker.Controllers
         return View();
       }
 
-    [HttpGet("/categories/{vendorId}/items/{orderId}")]
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
       Order order = Order.Find(orderId);
