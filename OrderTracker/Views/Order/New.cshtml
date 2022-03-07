@@ -1,17 +1,35 @@
 @{
   Layout = "_Layout";
 }
+@using OrderTracker.Models;
 
-<h1>Add a new order to @Model.Name</h1>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link disabled"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/vendors">Vendors</a>
+  </li> 
+  <li class="nav-item">
+    <a class="nav-link active" href="#">@Model.Name : Add Order</a>
+  </li>
+</ul>
+<div class="container" id="form-container">
+<h3>New Order for @Model.Name</h3>
 <form action="/vendors/@Model.Id/orders" method="post">
+  <div class="form-group">
   <input id="vendorId" name ="vendorId" type="hidden" value="@Model.Id">
   <label for="date">Date of Order</label>
-  <input id="date" name="date" type="text">
-  <label for="title">Title</label>
-  <input id="title" name="title" type="text">
+  <input id="date" class="form-control" name="date" type="date" required>
+  <label for="title">Item</label>
+  <input id="title" class="form-control" name="title" type="text" required>
   <label for="price">Price</label>
-  <input id="price" name="price" type="text">
+  <input id="price" class="form-control" name="price" type="text" required>
   <label for="description">Description</label>
-  <input id="description" name="description" type="text">
-  <button type="submit" class="btn btn-primary">Add Order</button>
+  <input id="description" class="form-control" name="description" type="text" required>
+  <button id="submit" type="submit" class="btn btn-primary">Add Order</button>
 </form>
+</div>

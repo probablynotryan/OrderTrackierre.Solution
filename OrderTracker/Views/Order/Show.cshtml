@@ -1,10 +1,30 @@
 @{
   Layout = "_Layout";
 }
+@using OrderTracker.Models;
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link disabled"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/vendors">Vendors</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link active" href="#"> Viewing Order: @Model["order"].Description</a>
+  </li>
+</ul>
+<div class="container">
+<h3 id="index">Order: @Model["order"].Title</h3>
 
-<h1>Orders: </h1>
+<p id="order-details">
+Date of Order: @Model["order"].Date <br>
+Item Ordered: @Model["order"].Title <br>
+Price: $@Model["order"].Price <br>
+Description: @Model["order"].Description <br>
+</p>
 
-<h2>@Model["order"].Description</h2>
-<h3>Category: @Model["vendor"].Name</h3>
-
-<a class="btn btn-primary" href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
+<a id="vendor-btn" class="btn btn-primary" href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
+</div>
