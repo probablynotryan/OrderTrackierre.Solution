@@ -18,18 +18,18 @@
   </li>
 </ul>
 <div class="container" id="form-container">
-<h3>New Order for @Model.Name</h3>
-<form action="/vendors/@Model.Id/orders" method="post">
-  <div class="form-group">
-  <input id="vendorId" name ="vendorId" type="hidden" value="@Model.Id">
-  <label for="date">Date of Order</label>
-  <input id="date" class="form-control" name="date" type="date" required>
-  <label for="title">Item</label>
-  <input id="title" class="form-control" name="title" type="text" required>
-  <label for="price">Price</label>
-  <input id="price" class="form-control" name="price" type="text" required>
-  <label for="description">Description</label>
-  <input id="description" class="form-control" name="description" type="text" required>
-  <button id="submit" type="submit" class="btn btn-primary">Add Order</button>
-</form>
+  <h3>New Order for @Model.Name</h3>
+  <form action="/vendors/@Model.Id/orders" method="post">
+    <div class="form-group">
+    <input id="vendorId" name ="vendorId" type="hidden" value="@Model.Id">
+    <label for="date">Date of Order</label>
+    <input id="date" class="form-control" name="date" type="date" required>
+    <label for="title">Item</label>
+    <input id="title" class="form-control" name="title" type="text" required>
+    <label for="price">Price</label>
+    <input id="price" class="form-control" name="price" type="text" required>
+    <label for="description">Description</label>
+    <input id="description" class="form-control" name="description" type="text" required>
+    <button id="submit" type="submit" class="btn btn-primary">Add Order</button>
+  </form>
 </div>

@@ -9,6 +9,5 @@ namespace OrderTracker.Controllers
       {
         return View();
       }
-
     }
 }

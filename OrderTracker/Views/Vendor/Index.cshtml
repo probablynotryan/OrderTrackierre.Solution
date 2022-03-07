@@ -14,17 +14,16 @@
   </li>
 </ul>
 <div class="container">
-<h3 id="index">Vendors</h3>
-<ul id="myUL">
-@if (Model.Count == 0)
-{
-  <li> No vendors have been added yet. </li>
-}
-@foreach (Vendor vendor in Model)
-{
-  <li><a href="/vendors/@vendor.Id">@vendor.Name : @vendor.Description</a></li>
-}
-</ul>
-
-<a id="vendor-btn" class="btn btn-primary" href="/vendors/new">Add Vendor</a>
+  <h3 id="index">Vendors</h3>
+  <ul id="myUL">
+  @if (Model.Count == 0)
+  {
+    <li> No vendors have been added yet. </li>
+  }
+  @foreach (Vendor vendor in Model)
+  {
+    <li><a href="/vendors/@vendor.Id">@vendor.Name : @vendor.Description</a></li>
+  }
+  </ul>
+  <a id="vendor-btn" class="btn btn-primary" href="/vendors/new">Add Vendor</a>
 </div>
