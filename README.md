@@ -1,37 +1,40 @@
-# Pierre's Order Trackierre
+# Pierre's Ordierre Trackierre
 
-#### By _**Ryan Bass**_
+#### By _**Ryan Bass**_ (github.com/probablynotryan)
 
-#### _Pierre's Bakery business is poppin' now that he's got a fancy application to handle his storefront. His bakery is so off the chain, in fact, that Suzie, Pete and Dollie want to become regular vendors. This application keeps things in order for him._
+#### _Epicodus Independent Project #8: Using MVC/Razor to make pages with some functionality in 'em!_
 
 ## Technologies Used
 
 * C#
-* Bootstrap / Popper
+* .NET 5.0
+* HTML
+* CSS
+* Bootstrap 5.1
 * MVC
-* Razzor
+* Razor
 
 ## Description
 
-_Once Pierre's program's built, a description will go here that will blow everybodys socks off._
+_Pierre's business has skyrocketed since the last application you made for him! He now is looking to take the paperwork off his desk and to the web! This application will allow him to add and search through his vendors and their orders._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Download or clone this repository to your computer.
+* Open this directory in VSCode or a preferred text editor.
+* Run `dotnet tool install -g dotnet-script` in your terminal to install REPL.
+* From the root of your downloaded repo, run `dotnet build OrderTracker` in your terminal.
+* After a successful build, still from the root folder, run the program by entering `dotnet run --project OrderTracker` in your terminal.
+* Using your favorite webbrowser, visit the following URL: `http://localhost:5000`.
+* Admire the splash page with a picture of my dog, navigate to the vendor tab, add vendors and orders and explore the site!
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* Tests are also avaliable in OrderTracker.Tests folders -- if you wish to run those, run `dotnet test Order.Tests` or `dotnet test Vendor.Tests` in your terminal (still from the root folder). (For more information about what tests are being conducted, check out ~/OrderTracker.Tests/ModelTests/!)
+
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No bugs reported at this time.
 
 ## License
-
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
-
-Copyright (c) Ryan Bass (/probablynotryan)
+MIT
+Copyright (c) 2022 Ryan Bass (github.com/probablynotryan)
