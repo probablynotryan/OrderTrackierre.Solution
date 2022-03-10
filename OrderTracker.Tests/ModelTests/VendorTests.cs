@@ -44,5 +44,17 @@ namespace VendorTracker.Tests
       // Assert
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsVendor_Vendor()
+    {
+      // Arrange
+      Vendor testVendorUno = new Vendor("Barbara's Baked Breads", "Sells bread");
+      Vendor testVendorDos = new Vendor("Papa Pete's Pristine Pastries", "Sells motor oil");
+      //Act
+      Vendor whatVendorIsIt = Vendor.Find(2);
+      //Assert
+      Assert.AreEqual(testVendorDos, whatVendorIsIt);
+   }
   }
 }
