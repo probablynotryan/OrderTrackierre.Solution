@@ -43,5 +43,31 @@ namespace OrderTracker.Tests
       // Assert
       CollectionAssert.AreEqual(testList, result);
     }
+
+
+    [TestMethod]
+    public void Find_ReturnsOrder_Order()
+    {
+      // Arrange
+      Order anOrder = new Order("","","","");
+      Order anotherOrder = new Order("","","","");
+      //Act
+      Order whatOrderIsIt = Order.Find(2);
+      //Assert
+      Assert.AreEqual(anotherOrder, whatOrderIsIt);
+    }
+
+    [TestMethod]
+    public void ClearAll_RemovesAllOrdersFromList_True()
+    {
+      // Arrange
+      Order bob = new Order("all", "the", "single", "ladies");
+      Order sue = new Order("hi", "my", "name", "is");
+      List<Order> nothingHere = new List<Order> { };
+      // Act
+      Vendor.ClearAll();
+      // Assert
+      CollectionAssert.AreEqual(nothingHere, Vendor.GetAll());
+    }
   }
 }
