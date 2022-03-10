@@ -75,8 +75,8 @@ namespace VendorTracker.Tests
     public void GetAll_ReturnsVendors_VendorList()
     {
       // Arrange
-      Vendor testVendor = new Vendor("","");
-      Vendor anotherVendor = new Vendor("","");
+      Vendor testVendor = new Vendor("bah-bah-bah","bah-barbara ann");
+      Vendor anotherVendor = new Vendor("hi i just met you","and this is crazy");
       List<Vendor> vendorList = new List<Vendor> {testVendor, anotherVendor};
       // Act
       List<Vendor> testResult = Vendor.GetAll();
