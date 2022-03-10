@@ -56,5 +56,19 @@ namespace VendorTracker.Tests
       //Assert
       Assert.AreEqual(testVendorDos, whatVendorIsIt);
    }
+
+    [TestMethod]
+    public void AddOrder_ReturnsOrder_Order()
+    {
+      // Arrange
+      Vendor testVendorUno = new Vendor("Barbara's Baked Breads", "Sells bread");
+      Order barbOrder = new Order("cats", "and", "boots", "and");
+      List<Order> checkList = new List<Order> {barbOrder};
+      // Act
+      testVendorUno.AddOrder(barbOrder);
+      List<Order> testAgainst = testVendorUno.Order;
+      // Assert
+      CollectionAssert.AreEqual(checkList, testAgainst);
+    }  
   }
 }
