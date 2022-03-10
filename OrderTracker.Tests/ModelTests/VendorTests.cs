@@ -70,5 +70,18 @@ namespace VendorTracker.Tests
       // Assert
       CollectionAssert.AreEqual(checkList, testAgainst);
     }  
+
+    [TestMethod]
+    public void GetAll_ReturnsVendors_VendorList()
+    {
+      // Arrange
+      Vendor testVendor = new Vendor("","");
+      Vendor anotherVendor = new Vendor("","");
+      List<Vendor> vendorList = new List<Vendor> {testVendor, anotherVendor};
+      // Act
+      List<Vendor> testResult = Vendor.GetAll();
+      // Assert
+      CollectionAssert.AreEqual(vendorList, testResult);
+    }
   }
 }
