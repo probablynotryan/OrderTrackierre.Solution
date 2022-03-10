@@ -83,5 +83,17 @@ namespace VendorTracker.Tests
       // Assert
       CollectionAssert.AreEqual(vendorList, testResult);
     }
+
+    [TestMethod]
+    public void ClearAll_RemovesAllVendorsFromList_True()
+    {
+      // Arrange
+      Vendor bob = new Vendor("bob", "bob");
+      List<Vendor> nothingHere = new List<Vendor> { };
+      // Act
+      Vendor.ClearAll();
+      // Assert
+      CollectionAssert.AreEqual(nothingHere, Vendor.GetAll());
+    }
   }
 }
