@@ -58,7 +58,7 @@ namespace OrderTracker.Tests
     }
 
     [TestMethod]
-    public void ClearAll_RemovesAllOrdersFromList_True()
+    public void ClearAll_RemovesAllOrdersFromList_EmptyList()
     {
       // Arrange
       Order bob = new Order("all", "the", "single", "ladies");
