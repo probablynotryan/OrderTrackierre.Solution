@@ -87,7 +87,7 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-    public void ClearAll_RemovesAllVendorsFromList_True()
+    public void ClearAll_RemovesAllVendorsFromList_EmptyList()
     {
       // Arrange
       Vendor bob = new Vendor("bob", "bob");
