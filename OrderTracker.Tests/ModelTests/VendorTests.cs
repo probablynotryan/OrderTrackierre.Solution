@@ -51,6 +51,7 @@ namespace VendorTracker.Tests
       // Arrange
       Vendor testVendorUno = new Vendor("Barbara's Baked Breads", "Sells bread");
       Vendor testVendorDos = new Vendor("Papa Pete's Pristine Pastries", "Sells motor oil");
+      Vendor testVendorTres = new Vendor("Donny's Doughnuts", "Sells doughnuts");
       //Act
       Vendor whatVendorIsIt = Vendor.Find(2);
       //Assert
@@ -77,7 +78,8 @@ namespace VendorTracker.Tests
       // Arrange
       Vendor testVendor = new Vendor("bah-bah-bah","bah-barbara ann");
       Vendor anotherVendor = new Vendor("hi i just met you","and this is crazy");
-      List<Vendor> vendorList = new List<Vendor> {testVendor, anotherVendor};
+      Vendor yetAnotherVendor = new Vendor("test", "youguessedit:test");
+      List<Vendor> vendorList = new List<Vendor> {testVendor, anotherVendor, yetAnotherVendor};
       // Act
       List<Vendor> testResult = Vendor.GetAll();
       // Assert
